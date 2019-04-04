@@ -1,0 +1,1374 @@
+extends layout
+
+block content
+
+    
+    // Updated Styles
+    link(rel='stylesheet', href='/stylesheets/updates.css')
+    // Custom Styles
+
+    link(rel='stylesheet', href='/stylesheets/custom.css')
+    // Responsive Styles
+    link(rel='stylesheet', href='/stylesheets/responsive.css')
+
+    script.
+        function clearCoor() {
+        document.getElementById("demo").style.display = "none";
+        }
+        function myFunction(e) {
+        document.getElementById("demo").style.display="block"
+        }
+
+    script(src='//cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js')
+    script(type='text/javascript', src='http://code.angularjs.org/1.2.1/angular-route.js')
+    script(type='text/javascript', charset='UTF-8', src='/javascripts/common.js')
+    script(type='text/javascript', charset='UTF-8', src='/javascripts/util.js')
+    script(type='text/javascript', charset='UTF-8', src='/javascripts/stats.js')
+    
+    div(ng-controller='stayController')
+        #page-wrapper
+            header#header.navbar-static-top
+                .topnav.hidden-xs
+                    .container
+                        ul.quick-menu.pull-left
+                            li.ribbon.currency
+                                a(href='', title='') INR
+                                ul.menu.mini.left
+                            li.ribbon
+                                a(href='') English
+                                ul.menu.mini
+                            li.ribbon
+                                a(href='') India
+                                ul.menu.mini
+                        ul.quick-menu.pull-right
+                            li
+                                a.button.yellow.btn-small(href='', style='height: 30px; font-size: 1em;')
+                                    i.soap-icon-shopping
+                                    |  SIGN UP
+                            li
+                                a.soap-popupbox(href='#travelo-login') LOGIN
+                            li
+                                a(href='') Business CAPITAL
+                            li
+                                a.soap-popupbox(href='#travelo-signup') Customer Care
+                .main-header
+                    
+                    a.mobile-menu-toggle(href='http://www.soaptheme.net/html/travelo/hotel-index.html#mobile-menu-01', data-toggle='collapse')
+                    .container
+                        
+                        h1.logo.navbar-brand
+                            a(href='index.html', title='Travelo - home')
+                                img(src='', alt='Travelo HTML5 Template')
+                        nav#main-menu(role='navigation')
+                            ul.menu
+                                li.menu-item-has-children
+                                    a(href='/home') Home
+                                li.menu-item-has-children.active
+                                    a(href='/hotel') Hotels
+                                li.menu-item-has-children
+                                    a(href='/flight') Flights
+                                li.menu-item-has-children
+                                    a(href='/restaurant') Restaurants
+                                li.menu-item-has-children
+                                    a(href='/cab') Cars
+                                li.menu-item-has-children
+                                    a(href='/cruise') Cruises
+                                li.menu-item-has-children
+                                    a(href='/tour') Tour
+                                li.menu-item-has-children.megamenu-menu
+                                    a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Pages
+                                    .megamenu-wrapper.container(data-items-per-column='8', style='left: -903.219px; width: 1170px; display: block;')
+                                        .megamenu-holder
+                                            ul.megamenu
+                                                li.menu-item-has-children.megamenu-columns-3(style='width: 42.8571%;')
+                                                    a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Standard Pages
+                                                    ul.sub-menu
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-aboutus1.html') About Us 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-aboutus2.html') About Us 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-services1.html') Services 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-services2.html') Services 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-photogallery-4column.html') Gallery 4 Column
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-photogallery-3column.html') Gallery 3 Column
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-photogallery-2column.html') Gallery 2 Column
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-photogallery-fullview.html') Gallery Read
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-blog-rightsidebar.html') Blog Right Sidebar
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-blog-leftsidebar.html') Blog Left Sidebar
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-blog-fullwidth.html') Blog Full Width
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-blog-read.html') Blog Read
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-faq1.html') Faq 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-faq2.html') Faq 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-layouts-leftsidebar.html') Layouts Left Sidebar
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-layouts-rightsidebar.html') Layouts Right Sidebar
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-layouts-twosidebar.html') Layouts Two Sidebar
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-layouts-fullwidth.html') Layouts Full Width
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-contactus1.html') Contact Us 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-contactus2.html') Contact Us 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-contactus3.html') Contact Us 3
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-travelo-policies.html') Travelo Policies
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-sitemap.html') Site Map
+                                                li.menu-item-has-children.megamenu-columns-2(style='width: 28.5714%;')
+                                                    a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Extra Pages
+                                                    ul.sub-menu
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-holidays.html') Holidays
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-hotdeals.html') Hot Deals
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-before-you-fly.html') Before You Fly
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-inflight-experience.html') Inflight Experience
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-things-todo1.html') Things To Do 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-things-todo2.html') Things To Do 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-essentials.html') Travel Essentials
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-stories.html') Travel Stories
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-guide.html') Travel Guide
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-ideas.html') Travel Ideas
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-insurance.html') Travel Insurance
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-group-booking.html') Group Bookings
+                                                li.menu-item-has-children.megamenu-columns-2(style='width: 28.5714%;')
+                                                    a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Special Pages
+                                                    ul.sub-menu
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-404-1.html') 404 Page 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-404-2.html') 404 Page 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-404-3.html') 404 Page 3
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-coming-soon1.html') Coming Soon 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-coming-soon2.html') Coming Soon 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-coming-soon3.html') Coming Soon 3
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-loading1.html') Loading Page 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-loading2.html') Loading Page 2
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-loading3.html') Loading Page 3
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-login1.html') Login Page 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-login2.html') Login Page 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-login3.html') Login Page 3
+                    nav#mobile-menu-01.mobile-menu.collapse(aria-expanded='false', style='height: 0px;')
+                        ul#mobile-primary-menu.menu
+                            li.menu-item-has-children
+                                a(href='/home') Home
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-0')
+                            li.menu-item-has-children.active
+                                a(href='/hotel') Hotels
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-1')
+                            li.menu-item-has-children
+                                a(href='/flight') Flights
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-2')
+                            li.menu-item-has-children
+                                a(href='/restaurant') Restaurants
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-0')
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-0')
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-0')
+                            li.menu-item-has-children
+                                a(href='/cab') Cars
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-3')
+                            li.menu-item-has-children
+                                a(href='/cruise') Cruises
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-4')
+                            li.menu-item-has-children
+                                a(href='/tour') Tour
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-5')
+                            li.menu-item-has-children
+                                a(href='#') Pages
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-6')
+                                ul#mobile-menu-submenu-item-6.collapse
+                                    li.menu-item-has-children
+                                        a(href='#') Standard Pages
+                                        ul
+                                            li
+                                                a(href='pages-aboutus1.html') About Us 1
+                                            li
+                                                a(href='pages-aboutus2.html') About Us 2
+                                            li
+                                                a(href='pages-services1.html') Services 1
+                                            li
+                                                a(href='pages-services2.html') Services 2
+                                            li
+                                                a(href='pages-photogallery-4column.html') Gallery 4 Column
+                                            li
+                                                a(href='pages-photogallery-3column.html') Gallery 3 Column
+                                            li
+                                                a(href='pages-photogallery-2column.html') Gallery 2 Column
+                                            li
+                                                a(href='pages-photogallery-fullview.html') Gallery Read
+                                            li
+                                                a(href='pages-blog-rightsidebar.html') Blog Right Sidebar
+                                            li
+                                                a(href='pages-blog-leftsidebar.html') Blog Left Sidebar
+                                            li
+                                                a(href='pages-blog-fullwidth.html') Blog Full Width
+                                            li
+                                                a(href='pages-blog-read.html') Blog Read
+                                            li
+                                                a(href='pages-faq1.html') Faq 1
+                                            li
+                                                a(href='pages-faq2.html') Faq 2
+                                            li
+                                                a(href='pages-layouts-leftsidebar.html') Layouts Left Sidebar
+                                            li
+                                                a(href='pages-layouts-rightsidebar.html') Layouts Right Sidebar
+                                            li
+                                                a(href='pages-layouts-twosidebar.html') Layouts Two Sidebar
+                                            li
+                                                a(href='pages-layouts-fullwidth.html') Layouts Full Width
+                                            li
+                                                a(href='pages-contactus1.html') Contact Us 1
+                                            li
+                                                a(href='pages-contactus2.html') Contact Us 2
+                                            li
+                                                a(href='pages-contactus3.html') Contact Us 3
+                                            li
+                                                a(href='pages-travelo-policies.html') Travelo Policies
+                                            li
+                                                a(href='pages-sitemap.html') Site Map
+                                    li.menu-item-has-children
+                                        a(href='#') Extra Pages
+                                        ul
+                                            li
+                                                a(href='extra-pages-holidays.html') Holidays
+                                            li
+                                                a(href='extra-pages-hotdeals.html') Hot Deals
+                                            li
+                                                a(href='extra-pages-before-you-fly.html') Before You Fly
+                                            li
+                                                a(href='extra-pages-inflight-experience.html') Inflight Experience
+                                            li
+                                                a(href='extra-pages-things-todo1.html') Things To Do 1
+                                            li
+                                                a(href='extra-pages-things-todo2.html') Things To Do 2
+                                            li
+                                                a(href='extra-pages-travel-essentials.html') Travel Essentials
+                                            li
+                                                a(href='extra-pages-travel-stories.html') Travel Stories
+                                            li
+                                                a(href='extra-pages-travel-guide.html') Travel Guide
+                                            li
+                                                a(href='extra-pages-travel-ideas.html') Travel Ideas
+                                            li
+                                                a(href='extra-pages-travel-insurance.html') Travel Insurance
+                                            li
+                                                a(href='extra-pages-group-booking.html') Group Bookings
+                                    li.menu-item-has-children
+                                        a(href='#') Special Pages
+                                        ul
+                                            li
+                                                a(href='pages-404-1.html') 404 Page 1
+                                            li
+                                                a(href='pages-404-2.html') 404 Page 2
+                                            li
+                                                a(href='pages-404-3.html') 404 Page 3
+                                            li
+                                                a(href='pages-coming-soon1.html') Coming Soon 1
+                                            li
+                                                a(href='pages-coming-soon2.html') Coming Soon 2
+                                            li
+                                                a(href='pages-coming-soon3.html') Coming Soon 3
+                                            li
+                                                a(href='pages-loading1.html') Loading Page 1
+                                            li
+                                                a(href='pages-loading2.html') Loading Page 2
+                                            li
+                                                a(href='pages-loading3.html') Loading Page 3
+                                            li
+                                                a(href='pages-login1.html') Login Page 1
+                                            li
+                                                a(href='pages-login2.html') Login Page 2
+                                            li
+                                                a(href='pages-login3.html') Login Page 3
+                            li.menu-item-has-children
+                                a(href='#') Shortcodes
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-7')
+                                ul#mobile-menu-submenu-item-7.collapse
+                                    li
+                                        a(href='shortcode-accordions-toggles.html') Accordions & Toggles
+                                    li
+                                        a(href='shortcode-tabs.html') Tabs
+                                    li
+                                        a(href='shortcode-buttons.html') Buttons
+                                    li
+                                        a(href='shortcode-icon-boxes.html') Icon Boxes
+                                    li
+                                        a(href='shortcode-gallery-styles.html') Image & Gallery Styles
+                                    li
+                                        a(href='shortcode-image-box-styles.html') Image Box Styles
+                                    li.menu-item-has-children
+                                        a(href='#') Listing Styles
+                                        ul
+                                            li
+                                                a(href='shortcode-listing-style1.html') Listing Style 01
+                                            li
+                                                a(href='shortcode-listing-style2.html') Listing Style 02
+                                            li
+                                                a(href='shortcode-listing-style3.html') Listing Style 03
+                                    li
+                                        a(href='shortcode-dropdowns.html') Dropdowns
+                                    li
+                                        a(href='shortcode-pricing-tables.html') Pricing Tables
+                                    li
+                                        a(href='shortcode-testimonials.html') Testimonials
+                                    li
+                                        a(href='shortcode-our-team.html') Our Team
+                                    li
+                                        a(href='shortcode-gallery-popup.html') Gallery Popup
+                                    li
+                                        a(href='shortcode-map-popup.html') Map Popup
+                                    li
+                                        a(href='shortcode-style-changer.html') Style Changer
+                                    li
+                                        a(href='shortcode-typography.html') Typography
+                                    li
+                                        a(href='shortcode-animations.html') Animations
+                            li.menu-item-has-children
+                                a(href='#') Bonus
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-8')
+                                ul#mobile-menu-submenu-item-8.collapse
+                                    li
+                                        a(href='dashboard1.html') Dashboard 1
+                                    li
+                                        a(href='dashboard2.html') Dashboard 2
+                                    li
+                                        a(href='dashboard3.html') Dashboard 3
+                                    li.menu-item-has-children
+                                        a(href='#') Sliders
+                                        ul
+                                            li
+                                                a(href='slider1.html') Slider - Travelo
+                                            li
+                                                a(href='slider2.html') Slider - Concept
+                                            li
+                                                a(href='slider3.html') Slider - Promotion
+                                            li
+                                                a(href='slider4.html') Slider - Snapshots
+                                            li
+                                                a(href='slider5.html') Slider - Holidays
+                                            li
+                                                a(href='slider6.html') Slider - Couples
+                                            li
+                                                a(href='slider7.html') Slider - Family
+                                    li.menu-item-has-children
+                                        a(href='#') 7 Footer Styles
+                                        ul
+                                            li
+                                                a(href='#') Default Style
+                                            li
+                                                a(href='footer-style1.html') Footer Style 1
+                                            li
+                                                a(href='footer-style2.html') Footer Style 2
+                                            li
+                                                a(href='footer-style3.html') Footer Style 3
+                                            li
+                                                a(href='footer-style4.html') Footer Style 4
+                                            li
+                                                a(href='footer-style5.html') Footer Style 5
+                                            li
+                                                a(href='footer-style6.html') Footer Style 6
+                                    li.menu-item-has-children
+                                        a(href='#') 8 Header Styles
+                                        ul
+                                            li
+                                                a(href='#') Default Style
+                                            li
+                                                a(href='header-style1.html') Header Style 1
+                                            li
+                                                a(href='header-style2.html') Header Style 2
+                                            li
+                                                a(href='header-style3.html') Header Style 3
+                                            li
+                                                a(href='header-style4.html') Header Style 4
+                                            li
+                                                a(href='header-style5.html') Header Style 5
+                                            li
+                                                a(href='header-style6.html') Header Style 6
+                                            li
+                                                a(href='header-style7.html') Header Style 7
+                                    li.menu-item-has-children
+                                        a(href='#') 7 Inner Start Styles
+                                        ul
+                                            li
+                                                a(href='#') Default Style
+                                            li
+                                                a(href='inner-starts-style1.html') Inner Start Style 1
+                                            li
+                                                a(href='inner-starts-style2.html') Inner Start Style 2
+                                            li
+                                                a(href='inner-starts-style3.html') Inner Start Style 3
+                                            li
+                                                a(href='inner-starts-style4.html') Inner Start Style 4
+                                            li
+                                                a(href='inner-starts-style5.html') Inner Start Style 5
+                                            li
+                                                a(href='inner-starts-style6.html') Inner Start Style 6
+                                    li.menu-item-has-children
+                                        a(href='#') 3 Search Styles
+                                        ul
+                                            li
+                                                a(href='search-style1.html') Search Style 1
+                                            li
+                                                a(href='search-style2.html') Search Style 2
+                                            li
+                                                a(href='search-style3.html') Search Style 3
+                            li
+                                a(href='http://themeforest.net/item/travelo-responsive-travel-booking-site-template/8346649?ref=SoapTheme')
+                                    i.soap-icon-shopping
+                                    |  PURCHASE
+                        ul.mobile-topnav.container
+                            li
+                                a(href='#') MY ACCOUNT
+                            li.ribbon.language.menu-color-skin
+                                a(href='#', data-toggle='collapse') ENGLISH
+                                ul.menu.mini(style='')
+                                    li
+                                        a(href='#', title='Dansk') Dansk
+                                    li
+                                        a(href='#', title='Deutsch') Deutsch
+                                    li.active
+                                        a(href='#', title='English') English
+                                    li
+                                        a(href='#', title='Español') Español
+                                    li
+                                        a(href='#', title='Français') Français
+                                    li
+                                        a(href='#', title='Italiano') Italiano
+                                    li
+                                        a(href='#', title='Magyar') Magyar
+                                    li
+                                        a(href='#', title='Nederlands') Nederlands
+                                    li
+                                        a(href='#', title='Norsk') Norsk
+                                    li
+                                        a(href='#', title='Polski') Polski
+                                    li
+                                        a(href='#', title='Português') Português
+                                    li
+                                        a(href='#', title='Suomi') Suomi
+                                    li
+                                        a(href='#', title='Svenska') Svenska
+                            li
+                                a.soap-popupbox(href='#travelo-login') LOGIN
+                            li
+                                a.soap-popupbox(href='#travelo-signup') SIGNUP
+                            li.ribbon.currency.menu-color-skin
+                                a(href='#') USD
+                                ul.menu.mini(style='')
+                                    li
+                                        a(href='#', title='AUD') AUD
+                                    li
+                                        a(href='#', title='BRL') BRL
+                                    li.active
+                                        a(href='#', title='USD') USD
+                                    li
+                                        a(href='#', title='CAD') CAD
+                                    li
+                                        a(href='#', title='CHF') CHF
+                                    li
+                                        a(href='#', title='CNY') CNY
+                                    li
+                                        a(href='#', title='CZK') CZK
+                                    li
+                                        a(href='#', title='DKK') DKK
+                                    li
+                                        a(href='#', title='EUR') EUR
+                                    li
+                                        a(href='#', title='GBP') GBP
+                                    li
+                                        a(href='#', title='HKD') HKD
+                                    li
+                                        a(href='#', title='HUF') HUF
+                                    li
+                                        a(href='#', title='IDR') IDR
+            section(id='')
+                .search-box-wrapper
+                    section#content.tour
+                        #slideshow.slideshow-bg(style='height: 541px;')
+                            .flexslider
+                                ul.slides
+                                    li(style='width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;')
+                                        .slidebg(style='background-image: url(images/hotel_home/Campsite-Daytime-Travel-Beans-Unique-Places-To-Stay.jpg);')
+                                    li(style='width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;')
+                                        .slidebg(style='background-image: url(images/hotel_home/Travel-Beans-Hotels-Collections-Boutique-Hotels.jpg);')
+                                    li.flex-active-slide(style='width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; transition: opacity 0.6s ease; z-index: 2;')
+                                        .slidebg(style='background-image: url(images/hotel_home/cabins-travel-beans-book-now.jpg);')
+                                    li.flex-active-slide(style='width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; transition: opacity 0.6s ease; z-index: 2;')
+                                        .slidebg(style='background-image: url(images/hotel_home/Travel-Beans-Hotel-And-Accomodations.jpg);')
+                                    li(style='width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;')
+                                        .slidebg(style='background-image: url(images/hotel_home/Travel-Beans-Hotel-Collection-Capmsite.jpg);')
+                                    li(style='width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;')
+                                        .slidebg(style='background-image: url(images/hotel_home/Hotels-In-India-Travel-Beans.jpg);')
+                            .container
+                                .table-wrapper.full-width
+                                    .table-cell
+                                        .heading.box
+                                            h1.title #TB Hotels
+                                            h3.sub-title
+                                                font(color='white') We Have More Than Just Hotels Explore More Unique Places !
+                                        .search-box(style='margin-bottom:0px;')
+                                            form
+                                                .row
+                                                    .col-sm-4.col-md-8.form-group(onmouseover='myFunction(event)', onmouseout='clearCoor()')
+                                                        input.input-text.full-width(type='text', ng-keyup='[search() , show()]', ng-model='hotel.search', placeholder='Where Do You Wanna Visit ? .... ')
+                                                    .col-sm-4.form-group
+                                                        button.button.btn-medium.full-width.uppercase.sky-blue1.animated(type='submit', data-animation-type='tada', ng-click='getHotel()') Search Now
+                                        #demo.row.col-md-8(style='margin-left:10px; top:-19px; z-index:999', onmouseover='myFunction(event)', onmouseout='clearCoor()')
+                                            .col-sm-12
+                                                div(style='max-height:100px; overflow-y:scroll; margin-right:0px; text-align:left;')
+                                                    table.table.table-hover(style='background-color:white')
+                                                        tbody
+                                                            tr(ng-repeat='city in cities')
+                                                                td(ng-click="result([[city]],'city')") {{city}}
+                                                            tr(ng-repeat='name in names')
+                                                                td(ng-click="result([[name]],'name')") [[name]]
+                                                            tr(ng-if='resp')
+                                                                td No result found
+                                        .text-center(style='margin-top:40px;')
+                                            a.button.btn-medium.yellow.uppercase.animated(href='#collections', data-animation-type='bounceInDown') View All Collections
+                    section
+                        .section(style='background-color:#f5f5f5')
+                            .container
+                                h2 Travelers Choice of Hotels
+                                .image-carousel.style2.flexslider(data-animation='slide', data-item-width='270', data-item-margin='30')
+                                    .flex-viewport(style='overflow: hidden; position: relative;')
+                                        ul.slides.image-box.hotel.listing-style1(style='width: 1000%; transition-duration: 0.6s; transform: translate3d(-300px, 0px, 0px);')
+                                            for hotel in data.hotels
+                                                li(style='width: 270px; float: left; display: block;')
+                                                    article.box
+                                                        figure
+                                                            a.hover-effect.popup-gallery(href='http://www.soaptheme.net/html/travelo/ajax/slideshow-popup.html')
+                                                                if hotel.images[0]
+                                                                    img(style='height:150px', alt='', src=hotel.images[0].image_url)
+                                                                else
+                                                                    img(style='height:150px', alt='', src="https://media-cdn.tripadvisor.com/media/photo-s/09/b2/8e/8e/hotel-seven-star.jpg")
+                                                        .details
+                                                            span.price
+                                                                small avg/night
+                                                                //| ₹#{hotel.deals[0].price}
+                                                            h4.box-title
+                                                                | #{hotel.name}
+                                                                small #{hotel.city}
+                                                        
+                                    ol.flex-control-nav.flex-control-paging
+                                        li
+                                            a 1
+                                        li
+                                            a.flex-active 2
+                                    ul.flex-direction-nav
+                                        li
+                                            a.flex-prev(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Previous
+                                        li
+                                            a.flex-next(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Next
+                                
+                                h2 Travelling Products
+                                .block.image-carousel.style2.flexslider(data-animation='slide', data-item-width='270', data-item-margin='30')
+                                    .flex-viewport(style='overflow: hidden; position: relative;')
+                                        ul.slides.image-box.listing-style2(style='width: 1000%; transition-duration: 0.6s; transform: translate3d(-300px, 0px, 0px);')
+                                            li(style='width: 270px; float: left; display: block;')
+                                                article.box
+                                                    figure
+                                                        a.hover-effect.popup-gallery(href='')
+                                                            img(src='/images/Products/Buy-Travel-Luggage-Travel-Beans-Hotel-Home.png', alt='', width='270', height='160', draggable='false')
+                                                    .details
+                                                        h4.box-title Travel Luggage
+                                                        label.price-wrapper
+                                                            | Starting @ 
+                                                            span.price-per-unit
+                                                                | ₹3999
+                                                                span
+                                            li(style='width: 270px; float: left; display: block;')
+                                                article.box
+                                                    figure
+                                                        a.hover-effect.popup-gallery(href='')
+                                                            img(src='/images/Products/Duffle-Gym-Bag-Carry-Bag-Travel-Beans-Hotel-Home.jpg', alt='', width='270', height='160', draggable='false')
+                                                    .details
+                                                        h4.box-title Duffle Bag
+                                                        label.price-wrapper
+                                                            | Starting @ 
+                                                            span.price-per-unit ₹620
+                                            li(style='width: 270px; float: left; display: block;')
+                                                article.box
+                                                    figure
+                                                        a.hover-effect.popup-gallery(href='')
+                                                            img(src='/images/Products/Women-Handbags-Travel-Beans-Hotel-Home.png', alt='', width='270', height='160', draggable='false')
+                                                    .details
+                                                        h4.box-title Handbags
+                                                        label.price-wrapper
+                                                            | Starting @
+                                                            span.price-per-unit ₹ 1570
+                                            li(style='width: 270px; float: left; display: block;')
+                                                article.box
+                                                    figure
+                                                        a.hover-effect.popup-gallery(href='')
+                                                            img(src='/images/Products/Sleeping-Eye-Mask-Travel-Beans-Hotel-Home.jpg', alt='', width='270', height='160', draggable='false')
+                                                    .details
+                                                        h4.box-title Eye Mask
+                                                        label.price-wrapper
+                                                            | Starting @ 
+                                                            span.price-per-unit ₹ 99
+                                            li(style='width: 270px; float: left; display: block;')
+                                                article.box
+                                                    figure
+                                                        a.hover-effect.popup-gallery(href='')
+                                                            img(src='/images/Products/Sunscreen-Lakme-Sun-Expert-Lotion-Trave-Beans-Hotel-Home.jpg', alt='', width='270', height='160', draggable='false')
+                                                    .details
+                                                        h4.box-title Sunscreen
+                                                        label.price-wrapper
+                                                            | Starting @ 
+                                                            span.price-per-unit ₹ 79
+                                            li(style='width: 270px; float: left; display: block;')
+                                                article.box
+                                                    figure
+                                                        a.hover-effect.popup-gallery(href='')
+                                                            img(src='/images/Products/Girl-Shorts-for-Summers-Travel-Beans-Hotel-Home.jpeg', alt='', width='270', height='160', draggable='false')
+                                                    .details
+                                                        h4.box-title Girl's Shorts
+                                                        label.price-wrapper
+                                                            | Starting @ 
+                                                            span.price-per-unit ₹ 379
+                                            li(style='width: 270px; float: left; display: block;')
+                                                article.box
+                                                    figure
+                                                        a.hover-effect.popup-gallery(href='')
+                                                            img(src='/images/Products/Headphone-Noise-Cancelation-Travel-Beans-Hotel-Home.png', alt='', width='270', height='160', draggable='false')
+                                                    .details
+                                                        h4.box-title Headphones
+                                                        label.price-wrapper
+                                                            | Starting @ 
+                                                            span.price-per-unit ₹ 599
+                                            li(style='width: 270px; float: left; display: block;')
+                                                article.box
+                                                    figure
+                                                        a.hover-effect.popup-gallery(href='')
+                                                            img(src='/images/Products/Face-Wipes-Clean-Garnier-Skin-Natiral-Ultra-Cleansing-Wipes-Travel-Beans-Hotel-Home.jpg', alt='', width='270', height='160', draggable='false')
+                                                    .details
+                                                        h4.box-title Wipes
+                                                        label.price-wrapper
+                                                            | Starting @ 
+                                                            span.price-per-unit ₹ 149
+                                    ol.flex-control-nav.flex-control-paging
+                                        li
+                                            a 1
+                                        li
+                                            a.flex-active 2
+                                    ul.flex-direction-nav
+                                        li
+                                            a.flex-prev(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Previous
+                                        li
+                                            a.flex-next(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Next
+                                #collections.block
+                                    h1
+                                        | Not Just Hotels , Travel Beans is About More ! 
+                                        a.active(href='#collections') #Collections
+                                    p
+                                        | To Make Your Vacations Best , We Have a Collection of The Most Awesome and Unique Places to Experience .
+                                    .row.image-box.style4
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/campsite-travel-beans', title='')
+                                                        img(src='images/hotel_collections/campsites-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Campsites
+                                                    a.goto-detail(href='/hotel/collection/campsite-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/bed-and-breakfast-travel-beans', title='')
+                                                        img(src='images/hotel_collections/bed-and-breakfast-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Bed and Breakfast
+                                                    a.goto-detail(href='/hotel/collection/bed-and-breakfast-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/boatstays-travel-beans', title='')
+                                                        img(src='images/hotel_collections/boatstays-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Boat stays
+                                                    a.goto-detail(href='/hotel/collection/boatstays-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/boutique-hotels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/botique-hotels-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Botique hotels
+                                                    a.goto-detail(href='/hotel/collection/boutique-hotels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/budget-hotels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/budget-hotel-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Budget hotel
+                                                    a.goto-detail(href='/hotel/collection/budget-hotels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/appartments-travel-beans', title='')
+                                                        img(src='images/hotel_collections/appartments-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Appartments
+                                                    a.goto-detail(href='/hotel/collection/appartments-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/cabins-travel-beans', title='')
+                                                        img(src='images/hotel_collections/cabins-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Cabins
+                                                    a.goto-detail(href='/hotel/collection/cabins-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/capsules-travel-beans', title='')
+                                                        img(src='images/hotel_collections/capsules-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Capsules
+                                                    a.goto-detail(href='/hotel/collection/capsules-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/country-houses-travel-beans', title='')
+                                                        img(src='images/hotel_collections/contry-house-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Country House
+                                                    a.goto-detail(href='/hotel/collection/country-houses-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/army-mess-travel-beans', title='')
+                                                        img(src='images/hotel_collections/army-mess-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Army Mess
+                                                    a.goto-detail(href='/hotel/collection/army-mess-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/cottages-travel-beans', title='')
+                                                        img(src='images/hotel_collections/cottages-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Cottages
+                                                    a.goto-detail(href='/hotel/collection/cottages-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/resorts-travel-beans', title='')
+                                                        img(src='images/hotel_collections/resorts-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Resorts
+                                                    a.goto-detail(href='/hotel/collection/resorts-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/country-side-travel-beans', title='')
+                                                        img(src='images/hotel_collections/country-side-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Country Side
+                                                    a.goto-detail(href='/hotel/collection/country-side-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/dharamshala-travel-beans', title='')
+                                                        img(src='images/hotel_collections/dharamshala-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Dharamshala
+                                                    a.goto-detail(href='/hotel/collection/dharamshala-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/economy-hotels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/economy-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Economy Hotels
+                                                    a.goto-detail(href='/hotel/collection/economy-hotels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/family-hotels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/family-hotels-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Family Hotels
+                                                    a.goto-detail(href='/hotel/collection/family-hotels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/farm-stays-travel-beans', title='')
+                                                        img(src='images/hotel_collections/farm-stays-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Farm Stays
+                                                    a.goto-detail(href='/hotel/collection/farm-stays-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/golf-hotels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/golf-hotels-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Golf Hotels
+                                                    a.goto-detail(href='/hotel/collection/golf-hotels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/guest-houses-travel-beans', title='')
+                                                        img(src='images/hotel_collections/guest-house-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Guest House
+                                                    a.goto-detail(href='/hotel/collection/guest-houses-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/high-rise-view-travel-beans', title='')
+                                                        img(src='images/hotel_collections/high-rise-view-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title High Rise View
+                                                    a.goto-detail(href='/hotel/collection/high-rise-view-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/holiday-homes-travel-beans', title='')
+                                                        img(src='images/hotel_collections/holiday-homes-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Holiday Homes
+                                                    a.goto-detail(href='/hotel/collection//hotel/collection/holiday-homes-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='holiday-parks-travel-beans', title='')
+                                                        img(src='images/hotel_collections/holiday-parks-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Holiday Parks
+                                                    a.goto-detail(href='/hotel/collection/holiday-parks-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/holiday-rentals-travel-beans', title='')
+                                                        img(src='images/hotel_collections/holiday-rentals-trave-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Holiday Rentals
+                                                    a.goto-detail(href='/hotel/collection/holiday-rentals-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/home-stays-travel-beans', title='')
+                                                        img(src='images/hotel_collections/homestays-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Home Stays
+                                                    a.goto-detail(href='/hotel/collection/home-stays-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/horror-houses-travel-beans', title='')
+                                                        img(src='images/hotel_collections/horror-houses-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Horror Houses
+                                                    a.goto-detail(href='/hotel/collection/horror-houses-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/hostels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/hostels-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Hostels
+                                                    a.goto-detail(href='/hotel/collection/hostels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/"hotel-with-jaccuzi-travel-beans"', title='')
+                                                        img(src='images/hotel_collections/hotel/collection-with-jacuzzi-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Hotel with Jacuzzi
+                                                    a.goto-detail(href='/hotel/collection/hotel-with-jaccuzi-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/igloo-houses-travel-beans', title='')
+                                                        img(src='images/hotel_collections/igloo-house-travel-beans.png', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Igloo House
+                                                    a.goto-detail(href='/hotel/collection/igloo-houses-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/inns-travel-beans', title='')
+                                                        img(src='images/hotel_collections/inns-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Inns
+                                                    a.goto-detail(href='/hotel/collection/inns-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/lodges-travel-beans', title='')
+                                                        img(src='images/hotel_collections/lodges-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Lodges
+                                                    a.goto-detail(href='/hotel/collection/lodges-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/love-hotels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/love-hotels-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Love Hotels
+                                                    a.goto-detail(href='/hotel/collection/love-hotels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/luxury-hotels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/luxury-hotels-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Luxury Hotels
+                                                    a.goto-detail(href='/hotel/collection/luxury-hotels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/luxury-tents-travel-beans', title='')
+                                                        img(src='images/hotel_collections/luxury-tents-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Luxury Tents
+                                                    a.goto-detail(href='/hotel/collection/luxury-tents-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/motels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/motels-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Motels
+                                                    a.goto-detail(href='/hotel/collection/motels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/palaces-stay-travel-beans', title='')
+                                                        img(src='images/hotel_collections/palace-stays-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Palaces Stay
+                                                    a.goto-detail(href='/hotel/collection/palaces-stay-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/pet-friendly-travel-beans', title='')
+                                                        img(src='images/hotel_collections/pet-friendly-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Pet Friendly
+                                                    a.goto-detail(href='/hotel/collection/pet-friendly-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/pg-travel-beans', title='')
+                                                        img(src='images/hotel_collections/pg-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title PG
+                                                    a.goto-detail(href='/hotel/collection/pg-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/rest-house-travel-beans', title='')
+                                                        img(src='images/hotel_collections/rest-house-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Rest House
+                                                    a.goto-detail(href='/hotel/collection/rest-house-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/riads-travel-beans', title='')
+                                                        img(src='images/hotel_collections/riads-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Riads
+                                                    a.goto-detail(href='/hotel/collection/riads-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/romantic-hotels-travel-beans', title='')
+                                                        img(src='images/hotel_collections/romantic-hotels-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Romantic Hotels
+                                                    a.goto-detail(href='/hotel/collection/romantic-hotels-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/ryokans-travel-beans', title='')
+                                                        img(src='images/hotel_collections/ryokans-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Ryokans
+                                                    a.goto-detail(href='/hotel/collection/ryokans-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/self-catering-travel-beans', title='')
+                                                        img(src='images/hotel_collections/self-catering-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Self Catering
+                                                    a.goto-detail(href='/hotel/collection/self-catering-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/serviced-appartments-travel-beans', title='')
+                                                        img(src='images/hotel_collections/serviced-appartments-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Serviced Appartments
+                                                    a.goto-detail(href='/hotel/collection/serviced-appartments-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/spa-travel-beans', title='')
+                                                        img(src='images/hotel_collections/spa-hotels-travel-beans.JPG', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title SPA Hotels
+                                                    a.goto-detail(href='/hotel/collection/spa-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/tent-house-travel-beans', title='')
+                                                        img(src='images/hotel_collections/tent-house-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Tent House
+                                                    a.goto-detail(href='/hotel/collection/tent-house-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/theme-house-travel-beans', title='')
+                                                        img(src='images/hotel_collections/theme-house-trave-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Theme House
+                                                    a.goto-detail(href='/hotel/collection/theme-house-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/village-stays-travel-beans', title='')
+                                                        img(src='images/hotel_collections/village-stays-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Village Stays
+                                                    a.goto-detail(href='/hotel/collection/village-stays-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                                        .col-sm-4
+                                            article.box
+                                                figure
+                                                    a.hover-effect(href='/hotel/collection/villas-travel-beans', title='')
+                                                        img(src='images/hotel_collections/villas-travel-beans.jpg', alt='', width='370', height='172')
+                                                .details
+                                                    h4.box-title Villas
+                                                    a.goto-detail(href='/hotel/collection/villas-travel-beans')
+                                                        span.glyphicon.glyphicon-arrow-right
+                        footer#footer.style5(style='background-color:white;')
+                            .footer-wrapper
+                                .container
+                                    .row
+                                        .col-xs-12.col-sm-6.col-md-3.col-lg-3
+                                            h2 Travel Beans
+                                            ul.discover.triangle.hover.row
+                                                li.col-xs-6
+                                                    a(href='') About Company
+                                                li.col-xs-6
+                                                    a(href='') Jobs
+                                                li.col-xs-6
+                                                    a(href='') Corporate Offices
+                                                li.col-xs-6
+                                                    a(href='') Carrers
+                                                li.col-xs-6
+                                                    a(href='') Legal Information
+                                                li.col-xs-6
+                                                    a(href='') Press Release
+                                                li.col-xs-6
+                                                    a(href='') Investors
+                                                li.col-xs-6
+                                                    a(href='') T & C
+                                                li.col-xs-6
+                                                    a(href='') Customer Care
+                                                li.col-xs-6
+                                                    a(href='') Privacy Policies
+                                                li.col-xs-6
+                                                    a(href='') Partner Help
+                                                li.col-xs-6
+                                                    a(href='') FAQ's
+                                                li.col-xs-6
+                                                    a(href='') Site Map
+                                        .col-xs-12.col-sm-6.col-md-3.col-lg-3
+                                            h2 Products
+                                            ul.discover.triangle.hover.row
+                                                li.col-xs-
+                                                    a(href='') TB Associates
+                                                li.col-xs-
+                                                    a(href='') TB Galaria
+                                                li.col-xs-
+                                                    a(href='') TB Judge
+                                                li.col-xs-
+                                                    a(href='') TB Sarah
+                                                li.col-xs-
+                                                    a(href='') TB #Tag
+                                                li.col-xs-
+                                                    a(href='') TB Shoppist
+                                                li.col-xs-
+                                                    a(href='') TB Indi Coin
+                                        .col-xs-12.col-sm-6.col-md-3.col-lg-3
+                                            h2 Grab Some Offers Now
+                                            p Subscribe Us to get latest Updates and offe₹
+                                            br
+                                            .icon-check
+                                                input.input-text.full-width(type='text', placeholder='your email')
+                                            br
+                                            span We respect your privacy
+                                        .col-xs-12.col-sm-6.col-md-3.col-lg-3
+                                            h2 About Travel Beans
+                                            p
+                                                | Travel Beans is a Metasearch Engine Technology , Developed To Compare Prices for all Categories and Products of Traveling at a One Stop Place so as to Bring the Entire Global Travel Market at One Binded Platform .
+                                            br
+                                            address.contact-details
+                                                span.contact-phone
+                                                    i.soap-icon-phone
+                                                    | Get In Touch
+                                                br
+                                                |                                             Mail At
+                                                a.contact-email(href='') contact@travelbeans.in
+                                            ul.social-icons.clearfix
+                                                li.twitter
+                                                    a(title='', href='', data-toggle='tooltip', data-original-title='twitter')
+                                                        i.soap-icon-twitter
+                                                li.googleplus
+                                                    a(title='', href='', data-toggle='tooltip', data-original-title='googleplus')
+                                                        i.soap-icon-googleplus
+                                                li.facebook
+                                                    a(title='', href='', data-toggle='tooltip', data-original-title='facebook')
+                                                        i.soap-icon-facebook
+                                                li.linkedin
+                                                    a(title='', href='', data-toggle='tooltip', data-original-title='linkedin')
+                                                        i.soap-icon-linkedin
+                                                li.vimeo
+                                                    a(title='', href='', data-toggle='tooltip', data-original-title='vimeo')
+                                                        i.soap-icon-vimeo
+                                                li.dribble
+                                                    a(title='', href='', data-toggle='tooltip', data-original-title='dribble')
+                                                        i.soap-icon-dribble
+                                                li.flickr
+                                                    a(title='', href='', data-toggle='tooltip', data-original-title='flickr')
+                                                        i.soap-icon-flickr
+                            .bottom.gray-area
+                                .container
+                                    .logo.pull-left
+                                        a(href='http://www.soaptheme.net/html/travelo/index.html', title='Travelo - home')
+                                            img(src='./Footer Hotel_files/logo.png', alt='Travelo HTML5 Template')
+                                    //
+                                        <div class="pull-right">
+                                        <a id="back-to-top" href="" class="animated bounce" data-animation-type="bounce" style="animation-duration: 1s; visibility: visible;"><i class="soap-icon-longarrow-up circle"></i></a>
+                                        </div>
+                                    .copyright.pull-right
+                                        p © 2018 Travel Beans
+        script.
+            document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+            });
+        // Javascript
+        script(type='text/javascript', src='/javascripts/jquery-1.11.1.min.js')
+        script(type='text/javascript', src='/javascripts/jquery.noconflict.js')
+        script(type='text/javascript', src='/javascripts/modernizr.2.7.1.min.js')
+        script(type='text/javascript', src='/javascripts/jquery-migrate-1.2.1.min.js')
+        script(type='text/javascript', src='/javascripts/jquery.placeholder.js')
+        script(type='text/javascript', src='/javascripts/jquery-ui.1.10.4.min.js')
+        script(type='text/javascript', src='/app.js')
+        // Twitter Bootstrap
+        // Flex Slider
+        // parallax
+        // waypoint
+        // load page Javascript
+        // Twitter Bootstrap
+        script(type='text/javascript', src='/javascripts/bootstrap.js')
+        // load revolution slider scripts
+        script(type='text/javascript', src='/javascripts/jquery.themepunch.tools.min.js')
+        script(type='text/javascript', src='/javascripts/jquery.themepunch.revolution.min.js')
+        // load BXSlider scripts
+        script(type='text/javascript', src='/javascripts/jquery.bxslider.min.js')
+        // load FlexSlider scripts
+        script(type='text/javascript', src='/javascripts/jquery.flexslider-min.js')
+        // Google Map Api
+        script(type='text/javascript', src='/javascripts/js')
+        script(type='text/javascript', src='/javascripts/gmap3.min.js')
+        // parallax
+        script(type='text/javascript', src='/javascripts/jquery.stellar.min.js')
+        // waypoint
+        script(type='text/javascript', src='/javascripts/waypoints.min.js')
+        // load page Javascript
+        script(type='text/javascript', src='/javascripts/theme-scripts.js')
+        script(type='text/javascript', src='/javascripts/scripts.js')
+        // for bottom to top scroller
+        script(type='text/javascript', src='/javascripts/top-scroller.js')
+        script(type='text/javascript').
+            tjq("#slideshow .flexslider").flexslider({
+            animation: "fade",
+            controlNav: false,
+            animationLoop: true,
+            directionNav: false,
+            slideshow: true,
+            slideshowSpeed: 5000
+            });
+        script(type='text/javascript').
+            tjq(document).ready(function() {
+            tjq('.revolution-slider').revolution(
+            {
+            sliderType:"standard",
+            sliderLayout:"auto",
+            dottedOverlay:"none",
+            delay:9000,
+            navigation: {
+            keyboardNavigation:"off",
+            keyboard_direction: "horizontal",
+            mouseScrollNavigation:"off",
+            mouseScrollReverse:"default",
+            onHoverStop:"on",
+            touch:{
+            touchenabled:"on",
+            swipe_threshold: 75,
+            swipe_min_touches: 1,
+            swipe_direction: "horizontal",
+            drag_block_vertical: false
+            }
+            ,
+            arrows: {
+            style:"default",
+            enable:true,
+            hide_onmobile:false,
+            hide_onleave:false,
+            tmp:'',
+            left: {
+            h_align:"left",
+            v_align:"center",
+            h_offset:20,
+            v_offset:0
+            },
+            right: {
+            h_align:"right",
+            v_align:"center",
+            h_offset:20,
+            v_offset:0
+            }
+            }
+            },
+            visibilityLevels:[1240,1024,778,480],
+            gridwidth:1200,
+            gridheight:646,
+            lazyType:"none",
+            shadow:0,
+            spinner:"spinner4",
+            stopLoop:"off",
+            stopAfterLoops:-1,
+            stopAtSlide:-1,
+            shuffle:"off",
+            autoHeight:"off",
+            hideThumbsOnMobile:"off",
+            hideSliderAtLimit:0,
+            hideCaptionAtLimit:0,
+            hideAllCaptionAtLilmit:0,
+            debugMode:false,
+            fallbacks: {
+            simplifyAll:"off",
+            nextSlideOnWindowFocus:"off",
+            disableFocusListener:false,
+            }
+            });
+            });
+        script(type='text/javascript').
+            tjq("#slideshow .flexslider").flexslider({
+            animation: "fade",
+            controlNav: false,
+            animationLoop: true,
+            directionNav: false,
+            slideshow: true,
+            slideshowSpeed: 5000
+            });
+        button#upBtn(onclick='topFunction()', title='Go to top')
+            i.fa.fa-chevron-up
+
