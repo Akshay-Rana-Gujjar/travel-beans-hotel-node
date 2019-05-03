@@ -16,9 +16,13 @@ html.js.flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.websqld
     link(rel='stylesheet', type='text/css', href='/stylesheets/settings.css', media='screen')
     link(rel='stylesheet', type='text/css', href='/stylesheets/jquery.bxslider.css', media='screen')
     link(rel='stylesheet', type='text/css', href='/stylesheets/style.css', media='screen')
-    link#main-style(rel='stylesheet', href='/stylesheets/style-orange.css') 
+    link#main-style(rel='stylesheet', href='/stylesheets/style-orange.css')   
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js')
+    script(type='text/javascript', src='http://code.angularjs.org/1.2.1/angular-route.js')
+    script(type='text/javascript', src='/javascripts/app.js')
 
     
     
-  body
+  body(ng-app="comparetravel")
     block content

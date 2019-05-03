@@ -25,4 +25,31 @@ router.get("/hotel", (req, res) => {
 
 });
 
+
+router.get("/hotel/search", function(req, res){
+
+  var query = req.query;
+
+  console.log(query);
+
+  axios.get(`${CONFIG.API_URL}/hotel`, {params: query})
+  .then(function(response){
+
+    var data = {};
+
+    data.hotels = response.data.result.hotel;
+
+    console.log(data);
+
+    res.render("hotel_search_page",{data});
+  });
+
+
+
+
+
+
+  
+});
+
 module.exports = router;

@@ -19,8 +19,7 @@ block content
         document.getElementById("demo").style.display="block"
         }
 
-    script(src='//cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js')
-    script(type='text/javascript', src='http://code.angularjs.org/1.2.1/angular-route.js')
+
     script(type='text/javascript', charset='UTF-8', src='/javascripts/common.js')
     script(type='text/javascript', charset='UTF-8', src='/javascripts/util.js')
     script(type='text/javascript', charset='UTF-8', src='/javascripts/stats.js')
@@ -951,7 +950,7 @@ block content
                                             article.box
                                                 figure
                                                     a.hover-effect(href='/hotel/collection/"hotel-with-jaccuzi-travel-beans"', title='')
-                                                        img(src='images/hotel_collections/hotel/collection-with-jacuzzi-travel-beans.jpg', alt='', width='370', height='172')
+                                                        img(src='/images/hotel_collections/hotel-with-jacuzzi-travel-beans.jpg', alt='', width='370', height='172')
                                                 .details
                                                     h4.box-title Hotel with Jacuzzi
                                                     a.goto-detail(href='/hotel/collection/hotel-with-jaccuzi-travel-beans')
@@ -1213,7 +1212,7 @@ block content
                                                     i.soap-icon-phone
                                                     | Get In Touch
                                                 br
-                                                |                                             Mail At
+                                                | Mail At
                                                 a.contact-email(href='') contact@travelbeans.in
                                             ul.social-icons.clearfix
                                                 li.twitter
@@ -1259,7 +1258,7 @@ block content
         script(type='text/javascript', src='/javascripts/jquery-migrate-1.2.1.min.js')
         script(type='text/javascript', src='/javascripts/jquery.placeholder.js')
         script(type='text/javascript', src='/javascripts/jquery-ui.1.10.4.min.js')
-        script(type='text/javascript', src='/app.js')
+        
         // Twitter Bootstrap
         // Flex Slider
         // parallax
@@ -1371,4 +1370,5 @@ block content
             });
         button#upBtn(onclick='topFunction()', title='Go to top')
             i.fa.fa-chevron-up
+        
 

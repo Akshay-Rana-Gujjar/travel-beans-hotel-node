@@ -1,0 +1,1159 @@
+extends layout
+
+block content
+    div(g-controller="staylistController")
+                
+        #page-wrapper
+            header#header.navbar-static-top
+                .topnav.hidden-xs
+                    .container
+                        ul.quick-menu.pull-left
+                            li
+                                a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') MY ACCOUNT
+                            li.ribbon
+                                a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') English
+                                ul.menu.mini
+                                    li
+                                        a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#', title='Hindi') Hindi
+                                    li.active
+                                        a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#', title='English') English
+                        ul.quick-menu.pull-right
+                            li
+                                a.button.yellow.btn-small(href='http://themeforest.net/item/travelo-responsive-travel-booking-site-template/8346649?ref=SoapTheme', style='height: 30px; font-size: 1em;')
+                                    i.soap-icon-shopping
+                            li
+                                a.soap-popupbox(href='http://www.soaptheme.net/html/travelo/hotel-index.html#travelo-login') LOGIN
+                            li
+                                a.soap-popupbox(href='http://www.soaptheme.net/html/travelo/hotel-index.html#travelo-signup') SIGNUP
+                            li.ribbon.currency
+                                a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#', title='') USD
+                                ul.menu.mini.left
+                                    li.active
+                                        a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#', title='USD') USD
+                                    li
+                                        a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#', title='INR') INR
+                .main-header
+                    //
+                        <a href="#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle collapsed" aria-expanded="false">
+                        Mobile Menu Toggle
+                        </a>
+                    a.mobile-menu-toggle(href='http://www.soaptheme.net/html/travelo/hotel-index.html#mobile-menu-01', data-toggle='collapse')
+                        i.fa.fa-bars
+                    .container
+                       
+                        h1.logo.navbar-brand
+                            a(href='index.html', title='Travelo - home')
+                                
+                        nav#main-menu(role='navigation')
+                            ul.menu
+                                li.menu-item-has-children
+                                    a(href='/home') Home
+                                li.menu-item-has-children.active
+                                    a(href='/hotel')  Hotels
+                                li.menu-item-has-children
+                                    a(href='/flight') Flights
+                                li.menu-item-has-children
+                                    a(href='/cab') Cars
+                                li.menu-item-has-children
+                                    a(href='/cruise') Cruises
+                                li.menu-item-has-children
+                                    a(href='/tour') Tour
+                                li.menu-item-has-children.megamenu-menu
+                                    a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Pages
+                                    .megamenu-wrapper.container(data-items-per-column='8', style='left: -903.219px; width: 1170px; display: block;')
+                                        .megamenu-holder
+                                            ul.megamenu
+                                                li.menu-item-has-children.megamenu-columns-3(style='width: 42.8571%;')
+                                                    a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Standard Pages
+                                                    ul.sub-menu
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-aboutus1.html') About Us 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-aboutus2.html') About Us 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-services1.html') Services 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-services2.html') Services 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-photogallery-4column.html') Gallery 4 Column
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-photogallery-3column.html') Gallery 3 Column
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-photogallery-2column.html') Gallery 2 Column
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-photogallery-fullview.html') Gallery Read
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-blog-rightsidebar.html') Blog Right Sidebar
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-blog-leftsidebar.html') Blog Left Sidebar
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-blog-fullwidth.html') Blog Full Width
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-blog-read.html') Blog Read
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-faq1.html') Faq 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-faq2.html') Faq 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-layouts-leftsidebar.html') Layouts Left Sidebar
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-layouts-rightsidebar.html') Layouts Right Sidebar
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-layouts-twosidebar.html') Layouts Two Sidebar
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-layouts-fullwidth.html') Layouts Full Width
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-contactus1.html') Contact Us 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-contactus2.html') Contact Us 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-contactus3.html') Contact Us 3
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-travelo-policies.html') Travelo Policies
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-sitemap.html') Site Map
+                                                li.menu-item-has-children.megamenu-columns-2(style='width: 28.5714%;')
+                                                    a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Extra Pages
+                                                    ul.sub-menu
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-holidays.html') Holidays
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-hotdeals.html') Hot Deals
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-before-you-fly.html') Before You Fly
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-inflight-experience.html') Inflight Experience
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-things-todo1.html') Things To Do 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-things-todo2.html') Things To Do 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-essentials.html') Travel Essentials
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-stories.html') Travel Stories
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-guide.html') Travel Guide
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-ideas.html') Travel Ideas
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-travel-insurance.html') Travel Insurance
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/extra-pages-group-booking.html') Group Bookings
+                                                li.menu-item-has-children.megamenu-columns-2(style='width: 28.5714%;')
+                                                    a(href='http://www.soaptheme.net/html/travelo/hotel-index.html#') Special Pages
+                                                    ul.sub-menu
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-404-1.html') 404 Page 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-404-2.html') 404 Page 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-404-3.html') 404 Page 3
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-coming-soon1.html') Coming Soon 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-coming-soon2.html') Coming Soon 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-coming-soon3.html') Coming Soon 3
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-loading1.html') Loading Page 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-loading2.html') Loading Page 2
+                                                        li
+                                                            ul
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-loading3.html') Loading Page 3
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-login1.html') Login Page 1
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-login2.html') Login Page 2
+                                                                li
+                                                                    a(href='http://www.soaptheme.net/html/travelo/pages-login3.html') Login Page 3
+                    nav#mobile-menu-01.mobile-menu.collapse(aria-expanded='false', style='height: 0px;')
+                        ul#mobile-primary-menu.menu
+                            li.menu-item-has-children
+                                a(href='index.html') Home
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-0')
+                                ul#mobile-menu-submenu-item-0.collapse
+                                    li
+                                        a(href='index.html') Home Layout 1
+                                    li
+                                        a(href='homepage2.html') Home Layout 2
+                                    li
+                                        a(href='homepage3.html') Home Layout 3
+                                    li
+                                        a(href='homepage4.html') Home Layout 4
+                                    li
+                                        a(href='homepage5.html') Home Layout 5
+                                    li
+                                        a(href='homepage6.html') Home Layout 6
+                                    li
+                                        a(href='homepage7.html') Home Layout 7
+                                    li
+                                        a(href='homepage8.html') Home Layout 8
+                                    li
+                                        a(href='homepage9.html') Home Layout 9
+                                    li
+                                        a(href='homepage10.html') Home Layout 10
+                                    li
+                                        a(href='homepage11.html') Home Layout 11
+                            li.menu-item-has-children.active
+                                a(href='hotel-index.html') Hotels
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-1')
+                                ul#mobile-menu-submenu-item-1.collapse
+                                    li
+                                        a(href='hotel-index.html') Home Hotels
+                                    li
+                                        a(href='hotel-list-view.html') List View
+                                    li
+                                        a(href='hotel-grid-view.html') Grid View
+                                    li
+                                        a(href='hotel-block-view.html') Block View
+                                    li.active
+                                        a(href='hotel-detailed.html') Detailed
+                                    li
+                                        a(href='hotel-booking.html') Booking
+                                    li
+                                        a(href='hotel-thankyou.html') Thank You
+                            li.menu-item-has-children
+                                a(href='flight-index.html') Flights
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-2')
+                                ul#mobile-menu-submenu-item-2.collapse
+                                    li
+                                        a(href='flight-index.html') Home Flights
+                                    li
+                                        a(href='flight-list-view.html') List View
+                                    li
+                                        a(href='flight-grid-view.html') Grid View
+                                    li
+                                        a(href='flight-block-view.html') Block View
+                                    li
+                                        a(href='flight-detailed.html') Detailed
+                                    li
+                                        a(href='flight-booking.html') Booking
+                                    li
+                                        a(href='flight-thankyou.html') Thank You
+                            li.menu-item-has-children
+                                a(href='car-index.html') Cars
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-3')
+                                ul#mobile-menu-submenu-item-3.collapse
+                                    li
+                                        a(href='car-index.html') Home Cars
+                                    li
+                                        a(href='car-list-view.html') List View
+                                    li
+                                        a(href='car-grid-view.html') Grid View
+                                    li
+                                        a(href='car-block-view.html') Block View
+                                    li
+                                        a(href='car-detailed.html') Detailed
+                                    li
+                                        a(href='car-booking.html') Booking
+                                    li
+                                        a(href='car-thankyou.html') Thank You
+                            li.menu-item-has-children
+                                a(href='cruise-index.html') Cruises
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-4')
+                                ul#mobile-menu-submenu-item-4.collapse
+                                    li
+                                        a(href='cruise-index.html') Home Cruises
+                                    li
+                                        a(href='cruise-list-view.html') List View
+                                    li
+                                        a(href='cruise-grid-view.html') Grid View
+                                    li
+                                        a(href='cruise-block-view.html') Block View
+                                    li
+                                        a(href='cruise-detailed.html') Detailed
+                                    li
+                                        a(href='cruise-booking.html') Booking
+                                    li
+                                        a(href='cruise-thankyou.html') Thank You
+                            li.menu-item-has-children
+                                a(href='tour-index.html') Tour
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-5')
+                                ul#mobile-menu-submenu-item-5.collapse
+                                    li
+                                        a(href='tour-index.html') Home Tour
+                                    li
+                                        a(href='tour-fancy-package-2column.html') Fancy Packages 2 Column
+                                    li
+                                        a(href='tour-fancy-package-3column.html') Fancy Packages 3 Column
+                                    li
+                                        a(href='tour-fancy-package-4column.html') Fancy Packages 4 Column
+                                    li
+                                        a(href='tour-simple-package-2column.html') Simple Packages 2 Column
+                                    li
+                                        a(href='tour-simple-package-3column.html') Simple Packages 3 Column
+                                    li
+                                        a(href='tour-simple-package-4column.html') Simple Packages 4 Column
+                                    li
+                                        a(href='tour-simple-package-3column.html') Location - Eruope
+                                    li
+                                        a(href='tour-simple-package-4column.html') Location - North America
+                                    li
+                                        a(href='tour-detailed1.html') Detailed 1
+                                    li
+                                        a(href='tour-detailed2.html') Detailed 2
+                                    li
+                                        a(href='tour-booking.html') Booking
+                            li.menu-item-has-children
+                                a(href='#') Pages
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-6')
+                                ul#mobile-menu-submenu-item-6.collapse
+                                    li.menu-item-has-children
+                                        a(href='#') Standard Pages
+                                        ul
+                                            li
+                                                a(href='pages-aboutus1.html') About Us 1
+                                            li
+                                                a(href='pages-aboutus2.html') About Us 2
+                                            li
+                                                a(href='pages-services1.html') Services 1
+                                            li
+                                                a(href='pages-services2.html') Services 2
+                                            li
+                                                a(href='pages-photogallery-4column.html') Gallery 4 Column
+                                            li
+                                                a(href='pages-photogallery-3column.html') Gallery 3 Column
+                                            li
+                                                a(href='pages-photogallery-2column.html') Gallery 2 Column
+                                            li
+                                                a(href='pages-photogallery-fullview.html') Gallery Read
+                                            li
+                                                a(href='pages-blog-rightsidebar.html') Blog Right Sidebar
+                                            li
+                                                a(href='pages-blog-leftsidebar.html') Blog Left Sidebar
+                                            li
+                                                a(href='pages-blog-fullwidth.html') Blog Full Width
+                                            li
+                                                a(href='pages-blog-read.html') Blog Read
+                                            li
+                                                a(href='pages-faq1.html') Faq 1
+                                            li
+                                                a(href='pages-faq2.html') Faq 2
+                                            li
+                                                a(href='pages-layouts-leftsidebar.html') Layouts Left Sidebar
+                                            li
+                                                a(href='pages-layouts-rightsidebar.html') Layouts Right Sidebar
+                                            li
+                                                a(href='pages-layouts-twosidebar.html') Layouts Two Sidebar
+                                            li
+                                                a(href='pages-layouts-fullwidth.html') Layouts Full Width
+                                            li
+                                                a(href='pages-contactus1.html') Contact Us 1
+                                            li
+                                                a(href='pages-contactus2.html') Contact Us 2
+                                            li
+                                                a(href='pages-contactus3.html') Contact Us 3
+                                            li
+                                                a(href='pages-travelo-policies.html') Travelo Policies
+                                            li
+                                                a(href='pages-sitemap.html') Site Map
+                                    li.menu-item-has-children
+                                        a(href='#') Extra Pages
+                                        ul
+                                            li
+                                                a(href='extra-pages-holidays.html') Holidays
+                                            li
+                                                a(href='extra-pages-hotdeals.html') Hot Deals
+                                            li
+                                                a(href='extra-pages-before-you-fly.html') Before You Fly
+                                            li
+                                                a(href='extra-pages-inflight-experience.html') Inflight Experience
+                                            li
+                                                a(href='extra-pages-things-todo1.html') Things To Do 1
+                                            li
+                                                a(href='extra-pages-things-todo2.html') Things To Do 2
+                                            li
+                                                a(href='extra-pages-travel-essentials.html') Travel Essentials
+                                            li
+                                                a(href='extra-pages-travel-stories.html') Travel Stories
+                                            li
+                                                a(href='extra-pages-travel-guide.html') Travel Guide
+                                            li
+                                                a(href='extra-pages-travel-ideas.html') Travel Ideas
+                                            li
+                                                a(href='extra-pages-travel-insurance.html') Travel Insurance
+                                            li
+                                                a(href='extra-pages-group-booking.html') Group Bookings
+                                    li.menu-item-has-children
+                                        a(href='#') Special Pages
+                                        ul
+                                            li
+                                                a(href='pages-404-1.html') 404 Page 1
+                                            li
+                                                a(href='pages-404-2.html') 404 Page 2
+                                            li
+                                                a(href='pages-404-3.html') 404 Page 3
+                                            li
+                                                a(href='pages-coming-soon1.html') Coming Soon 1
+                                            li
+                                                a(href='pages-coming-soon2.html') Coming Soon 2
+                                            li
+                                                a(href='pages-coming-soon3.html') Coming Soon 3
+                                            li
+                                                a(href='pages-loading1.html') Loading Page 1
+                                            li
+                                                a(href='pages-loading2.html') Loading Page 2
+                                            li
+                                                a(href='pages-loading3.html') Loading Page 3
+                                            li
+                                                a(href='pages-login1.html') Login Page 1
+                                            li
+                                                a(href='pages-login2.html') Login Page 2
+                                            li
+                                                a(href='pages-login3.html') Login Page 3
+                            li.menu-item-has-children
+                                a(href='#') Shortcodes
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-7')
+                                ul#mobile-menu-submenu-item-7.collapse
+                                    li
+                                        a(href='shortcode-accordions-toggles.html') Accordions &amp; Toggles
+                                    li
+                                        a(href='shortcode-tabs.html') Tabs
+                                    li
+                                        a(href='shortcode-buttons.html') Buttons
+                                    li
+                                        a(href='shortcode-icon-boxes.html') Icon Boxes
+                                    li
+                                        a(href='shortcode-gallery-styles.html') Image &amp; Gallery Styles
+                                    li
+                                        a(href='shortcode-image-box-styles.html') Image Box Styles
+                                    li.menu-item-has-children
+                                        a(href='#') Listing Styles
+                                        ul
+                                            li
+                                                a(href='shortcode-listing-style1.html') Listing Style 01
+                                            li
+                                                a(href='shortcode-listing-style2.html') Listing Style 02
+                                            li
+                                                a(href='shortcode-listing-style3.html') Listing Style 03
+                                    li
+                                        a(href='shortcode-dropdowns.html') Dropdowns
+                                    li
+                                        a(href='shortcode-pricing-tables.html') Pricing Tables
+                                    li
+                                        a(href='shortcode-testimonials.html') Testimonials
+                                    li
+                                        a(href='shortcode-our-team.html') Our Team
+                                    li
+                                        a(href='shortcode-gallery-popup.html') Gallery Popup
+                                    li
+                                        a(href='shortcode-map-popup.html') Map Popup
+                                    li
+                                        a(href='shortcode-style-changer.html') Style Changer
+                                    li
+                                        a(href='shortcode-typography.html') Typography
+                                    li
+                                        a(href='shortcode-animations.html') Animations
+                            li.menu-item-has-children
+                                a(href='#') Bonus
+                                button.dropdown-toggle.collapsed(data-toggle='collapse', data-target='#mobile-menu-submenu-item-8')
+                                ul#mobile-menu-submenu-item-8.collapse
+                                    li
+                                        a(href='dashboard1.html') Dashboard 1
+                                    li
+                                        a(href='dashboard2.html') Dashboard 2
+                                    li
+                                        a(href='dashboard3.html') Dashboard 3
+                                    li.menu-item-has-children
+                                        a(href='#') Sliders
+                                        ul
+                                            li
+                                                a(href='slider1.html') Slider - Travelo
+                                            li
+                                                a(href='slider2.html') Slider - Concept
+                                            li
+                                                a(href='slider3.html') Slider - Promotion
+                                            li
+                                                a(href='slider4.html') Slider - Snapshots
+                                            li
+                                                a(href='slider5.html') Slider - Holidays
+                                            li
+                                                a(href='slider6.html') Slider - Couples
+                                            li
+                                                a(href='slider7.html') Slider - Family
+                                    li.menu-item-has-children
+                                        a(href='#') 7 Footer Styles
+                                        ul
+                                            li
+                                                a(href='#') Default Style
+                                            li
+                                                a(href='footer-style1.html') Footer Style 1
+                                            li
+                                                a(href='footer-style2.html') Footer Style 2
+                                            li
+                                                a(href='footer-style3.html') Footer Style 3
+                                            li
+                                                a(href='footer-style4.html') Footer Style 4
+                                            li
+                                                a(href='footer-style5.html') Footer Style 5
+                                            li
+                                                a(href='footer-style6.html') Footer Style 6
+                                    li.menu-item-has-children
+                                        a(href='#') 8 Header Styles
+                                        ul
+                                            li
+                                                a(href='#') Default Style
+                                            li
+                                                a(href='header-style1.html') Header Style 1
+                                            li
+                                                a(href='header-style2.html') Header Style 2
+                                            li
+                                                a(href='header-style3.html') Header Style 3
+                                            li
+                                                a(href='header-style4.html') Header Style 4
+                                            li
+                                                a(href='header-style5.html') Header Style 5
+                                            li
+                                                a(href='header-style6.html') Header Style 6
+                                            li
+                                                a(href='header-style7.html') Header Style 7
+                                    li.menu-item-has-children
+                                        a(href='#') 7 Inner Start Styles
+                                        ul
+                                            li
+                                                a(href='#') Default Style
+                                            li
+                                                a(href='inner-starts-style1.html') Inner Start Style 1
+                                            li
+                                                a(href='inner-starts-style2.html') Inner Start Style 2
+                                            li
+                                                a(href='inner-starts-style3.html') Inner Start Style 3
+                                            li
+                                                a(href='inner-starts-style4.html') Inner Start Style 4
+                                            li
+                                                a(href='inner-starts-style5.html') Inner Start Style 5
+                                            li
+                                                a(href='inner-starts-style6.html') Inner Start Style 6
+                                    li.menu-item-has-children
+                                        a(href='#') 3 Search Styles
+                                        ul
+                                            li
+                                                a(href='search-style1.html') Search Style 1
+                                            li
+                                                a(href='search-style2.html') Search Style 2
+                                            li
+                                                a(href='search-style3.html') Search Style 3
+                            li
+                                a(href='http://themeforest.net/item/travelo-responsive-travel-booking-site-template/8346649?ref=SoapTheme')
+                                    i.soap-icon-shopping
+                        ul.mobile-topnav.container
+                            li
+                                a(href='#') MY ACCOUNT
+                            li.ribbon.language.menu-color-skin
+                                a(href='#', data-toggle='collapse') ENGLISH
+                                ul.menu.mini(style='')
+                                    li
+                                        a(href='#', title='Dansk') Dansk
+                                    li
+                                        a(href='#', title='Deutsch') Deutsch
+                                    li.active
+                                        a(href='#', title='English') English
+                                    li
+                                        a(href='#', title='Español') Espa&ntilde;ol
+                                    li
+                                        a(href='#', title='Français') Fran&ccedil;ais
+                                    li
+                                        a(href='#', title='Italiano') Italiano
+                                    li
+                                        a(href='#', title='Magyar') Magyar
+                                    li
+                                        a(href='#', title='Nederlands') Nederlands
+                                    li
+                                        a(href='#', title='Norsk') Norsk
+                                    li
+                                        a(href='#', title='Polski') Polski
+                                    li
+                                        a(href='#', title='Português') Portugu&ecirc;s
+                                    li
+                                        a(href='#', title='Suomi') Suomi
+                                    li
+                                        a(href='#', title='Svenska') Svenska
+                            li
+                                a.soap-popupbox(href='#travelo-login') LOGIN
+                            li
+                                a.soap-popupbox(href='#travelo-signup') SIGNUP
+                            li.ribbon.currency.menu-color-skin
+                                a(href='#') USD
+                                ul.menu.mini(style='')
+                                    li
+                                        a(href='#', title='AUD') AUD
+                                    li
+                                        a(href='#', title='BRL') BRL
+                                    li.active
+                                        a(href='#', title='USD') USD
+                                    li
+                                        a(href='#', title='CAD') CAD
+                                    li
+                                        a(href='#', title='CHF') CHF
+                                    li
+                                        a(href='#', title='CNY') CNY
+                                    li
+                                        a(href='#', title='CZK') CZK
+                                    li
+                                        a(href='#', title='DKK') DKK
+                                    li
+                                        a(href='#', title='EUR') EUR
+                                    li
+                                        a(href='#', title='GBP') GBP
+                                    li
+                                        a(href='#', title='HKD') HKD
+                                    li
+                                        a(href='#', title='HUF') HUF
+                                    li
+                                        a(href='#', title='IDR') IDR
+            .page-title-container
+                .container
+                    .page-title.pull-left
+                        h2.entry-title Hotel Search Results
+                    ul.breadcrumbs.pull-right
+                        li
+                            a(href='http://www.soaptheme.net/html/travelo/hotel-list-view.html#') HOME
+                        li.active Hotel Search Results
+            section#content
+                .container
+                    #main
+                        .row
+                            .col-sm-4.col-md-3
+                                .toggle-container.filters-container
+                                    .panel.style1.arrow-right
+                                        button.btn-medium.icon-check.uppercase.full-width(ng-click='hotel = {}') Clear filter
+                                    .panel.style1.arrow-right
+                                        h4.panel-title
+                                            a.collapsed(data-toggle='collapse', href='#modify-search-panel', aria-expanded='false') Modify Search
+                                        #modify-search-panel.panel-collapse.collapse(aria-expanded='false', style='height: 0px;')
+                                            .panel-content
+                                                form
+                                                    .form-group
+                                                        label check in
+                                                        input(type='date', ng-model='hotel.check_in', placeholder='mm/dd/yy')
+                                                    .form-group
+                                                        label check out
+                                                        input(type='date', ng-model='hotel.check_out', ng-change='checkErr()', placeholder='mm/dd/yy')
+                                                    span(style='color:red') {{errMessage}}
+                                                    br
+                                                    button.btn-medium.icon-check.uppercase.full-width(ng-click='getHotelweek()') search again
+                                    .panel.style1.arrow-right
+                                        h4.panel-title
+                                            a.collapsed(data-toggle='collapse', href='http://www.soaptheme.net/html/travelo/hotel-list-view.html#price-filter') Price
+                                        #price-filter.panel-collapse.collapse
+                                            .panel-content
+                                                .form-group
+                                                    div
+                                                        label Max Price:
+                                                        input(type='range', min='{{min}}', max='{{max}}', value='{{max}}', ng-model='hotel.end_price')
+                                                        p
+                                                            span {{hotel.end_price}}
+                                                br
+                                                button.btn-medium.icon-check.uppercase.full-width(ng-click='getHotelPrice()') search again
+                                    .panel.style1.arrow-right
+                                        h4.panel-title
+                                            a.collapsed(data-toggle='collapse', href='http://www.soaptheme.net/html/travelo/hotel-list-view.html#rating-filter') User Rating
+                                        #rating-filter.panel-collapse.collapse.filters-container
+                                            .panel-content
+                                                .form-group
+                                                    input#rating1(type='radio', name='rating', value='9', ng-click='getHotelRating()', ng-model='hotel.rating')
+                                                    label.label.success 9+
+                                                    br
+                                                    input#rating2(type='radio', name='rating', value='8', ng-click='getHotelRating()', ng-model='hotel.rating')
+                                                    label.label.info 8+
+                                                    br
+                                                    input#rating3(type='radio', name='rating', value='7', ng-click='getHotelRating()', ng-model='hotel.rating')
+                                                    label.label.warning 7+
+                                                    br
+                                                    input#rating4(type='radio', name='rating', value='5', ng-click='getHotelRating()', ng-model='hotel.rating')
+                                                    label.label.danger 5+
+                                                    br
+                                                    input#rating5(type='radio', name='rating', value='0', ng-click='getHotelRating()', ng-model='hotel.rating')
+                                                    label.label.other 0+
+                                                br
+                                                // <button class="btn-medium icon-check uppercase full-width" ng-click="getHotelRating()">search again</button>
+                                    .panel.style1.arrow-right
+                                        h4.panel-title
+                                            a.collapsed(data-toggle='collapse', href='http://www.soaptheme.net/html/travelo/hotel-list-view.html#star-filter') Star
+                                        #star-filter.panel-collapse.collapse.filters-container
+                                            .panel-content
+                                                .form-group
+                                                    label
+                                                        i.fa.fa-star(aria-hidden='true')
+                                                        input#star1(type='radio', name='star', value='1', ng-click='getHotelStar()', ng-model='hotel.star')
+                                                    br
+                                                    label
+                                                        i.fa.fa-star(aria-hidden='true')
+                                                        input#star2(type='radio', name='star', value='3', ng-click='getHotelStar()', ng-model='hotel.star')
+                                                    br
+                                                    label
+                                                        i.fa.fa-star(aria-hidden='true')
+                                                        input#star3(type='radio', name='star', value='5', ng-click='getHotelStar()', ng-model='hotel.star')
+                                                    br
+                                                    label
+                                                        i.fa.fa-star(aria-hidden='true')
+                                                        input#star4(type='radio', name='star', value='7', ng-click='getHotelStar()', ng-model='hotel.star')
+                            .col-sm-8.col-md-9
+                                .sort-by-section.clearfix
+                                    h4.sort-by-title.block-sm Search results by:
+                                    p
+                                        input.input-text.full-width(type='text', ng-model='hotel', placeholder='search by keyword')
+
+
+                                    each hotel in data.hotels
+                                        div(ng-repeat='room in hotel.rooms')
+                                            article.box(ng-if="{{room.room_type}}==1 && {{room.breakfast}}=='false' && {{room.balcony}}=='false'")
+                                                figure.col-sm-5.col-md-4
+                                                    img(data-toggle='modal', data-target='#myModal', ng-click='openGallery(hotel)', style='height:150px; cursor: pointer', src='{{hotel.images[0].image_url}}', alt='Travel Beans')
+                                                    // Modal
+                                                    #myModal.modal.fade(role='dialog')
+                                                        .modal-dialog
+                                                            // Modal content
+                                                            .modal-content
+                                                                #photos-tab.tab-pane.fade.active.in
+                                                                    .photo-gallery.style1(data-animation='slide', data-sync='#photos-tab .image-carousel')
+                                                                        .flex-viewport(style='overflow: hidden; position: relative;')
+                                                                            ul.slides.slider(style='width: 4000%; transition-duration: 0.6s;')
+                                                                                // ngRepeat: image in roomData.hotelData.images
+                                                                                li.mySlides.ng-scope(ng-repeat='image in roomData.hotelData.images', style=' float: left; display: block;')
+                                                                                    img.img(src='https://imgio.trivago.com/partnerimages/28/65/286549466_l.jpeg', alt='', draggable='false')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                                li.mySlides.ng-scope(ng-repeat='image in roomData.hotelData.images', style=' float: left; display: block;')
+                                                                                    img.img(src='https://imgio.trivago.com/uploadimages/26/26/26261124_l.jpeg', alt='', draggable='false')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                                li.mySlides.ng-scope(ng-repeat='image in roomData.hotelData.images', style=' float: left; display: block;')
+                                                                                    img.img(src='https://imgio.trivago.com/partnerimages/28/65/286549450_l.jpeg', alt='', draggable='false')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                        //
+                                                                            <ol class="flex-control-nav flex-control-paging">
+                                                                            <li><a class="">1</a></li>
+                                                                            <li><a class="">2</a></li>
+                                                                            <li><a class="flex-active">3</a></li>
+                                                                            </ol><ul class="flex-direction-nav">
+                                                                            <li><a class="flex-prev" href="#">Previous</a></li>
+                                                                            <li><a class="flex-next" href="#">Next</a></li>
+                                                                            </ul>
+                                                                    .image-carousel.style1(data-animation='slide', data-item-width='70', data-item-margin='10', data-sync='#photos-tab .photo-gallery')
+                                                                        .flex-viewport(style='overflow: hidden; position: relative;')
+                                                                            ul.slides(style='display:block; width: 3000%; ')
+                                                                                // ngRepeat: image in roomData.hotelData.images
+                                                                                li.demo.w3-opacity.w3-hover-opacity-off.ng-scope(ng-click='currentDiv($index+1)', ng-repeat='image in roomData.hotelData.images', style=' transition-duration: 0.6s; width: 70px; float: left; display: block; height: 70px; position: relative;')
+                                                                                    img.img(src='https://imgio.trivago.com/partnerimages/28/65/286549466_l.jpeg', alt='', draggable='false', style='position: absolute; top: 50%; margin-top: -35px; left: 50%; margin-left: -35px;')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                                li.demo.w3-opacity.w3-hover-opacity-off.ng-scope(ng-click='currentDiv($index+1)', ng-repeat='image in roomData.hotelData.images', style=' transition-duration: 0.6s; width: 70px; float: left; display: block; height: 70px; position: relative;')
+                                                                                    img.img(src='https://imgio.trivago.com/uploadimages/26/26/26261124_l.jpeg', alt='', draggable='false', style='position: absolute; top: 50%; margin-top: -35px; left: 50%; margin-left: -35px;')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                                li.demo.w3-opacity.w3-hover-opacity-off.ng-scope(ng-click='currentDiv($index+1)', ng-repeat='image in roomData.hotelData.images', style=' transition-duration: 0.6s; width: 70px; float: left; display: block; height: 70px; position: relative;')
+                                                                                    img.img(src='https://imgio.trivago.com/partnerimages/28/65/286549450_l.jpeg', alt='', draggable='false', style='position: absolute; top: 50%; margin-top: -35px; left: 50%; margin-left: -35px;')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                        ul.flex-direction-nav
+                                                                            li
+                                                                                a.flex-prev Previous
+                                                                            li
+                                                                                a.flex-next Next
+                                                .details.col-sm-7.col-md-8
+                                                    div
+                                                        div
+                                                            h4.box-title
+                                                                small
+                                                                    i.fa.fa-map-marker(aria-hidden='true')
+                                                                    span#latitude(style='cursor:pointer', ng-click='openMap(hotel)', data-toggle='modal', data-target='#mapModal', data-latitude='{{hotel.latitude}}', data-longitude='{{hotel.longitude}}') {{hotel.address}},{{hotel.city}}
+                                                            #mapModal.modal.fade(role='dialog')
+                                                                .modal-dialog
+                                                                    // Modal content
+                                                                    .modal-content
+                                                                        .modal-body
+                                                                            i.fa.fa-map-marker
+                                                                            span#longitude(data-latitude='{{mapData.latitude}}', data-longitude='{{mapData.longitude}}') {{mapData.city}}
+                                                                            #map(style='height:354px')
+                                                                                script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAg-3eaCM5LOJXDjY6cMBASoAnREc4-R58&callback=myMap')
+                                                                            p Some text in the modal.
+                                                            .amenities
+                                                                i.fa.fa-wifi(ng-if='hotel.amenities.wifi_in_lobby', aria-hidden='true')
+                                                                i.fa.fa-car(ng-if='hotel.amenities.parking', aria-hidden='true')
+                                                                i.fa.fa-heart(ng-if='hotel.amenities.couple_friendly', aria-hidden='true')
+                                                                i.fa.fa-dumbbell(ng-if='hotel.amenities.gym', aria-hidden='true')
+                                                                i.fa.fa-swimming-pool(ng-if='hotel.amenities.outdoor_swimming_pool', aria-hidden='true')
+                                                        div
+                                                            div(ng-if='{{hotel.star}}==1')
+                                                                span(ng-repeat='i in [1]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==2')
+                                                                span(ng-repeat='i in [1,2]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==3')
+                                                                span(ng-repeat='i in [1,2,3]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==4')
+                                                                span(ng-repeat='i in [1,2,3,4]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==5')
+                                                                span(ng-repeat='i in [1,2,3,4,5]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==6')
+                                                                span(ng-repeat='i in [1,2,3,4,5,6]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==7')
+                                                                span(ng-repeat='i in [1,2,3,4,5,6,7]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                    div
+                                                        div
+                                                            span.price
+                                                                    small {{room.deals[0].website.website}}
+                                                            center
+                                                                a.button.btn-small.green(ng-click='showDetail(room.id)') View Detail
+                                                                a.button.btn-small.yellow(data-toggle='collapse', data-target='#{{hotel.id}}') More Deals
+                                                            span.price(style='text-align: left')
+                                                                a(href='{{price.hotel_url}}')
+                                                                    small {{price.website.website}}
+                                                .collapse(id='{{hotel.id}}', style='transition:2s')
+                                                    table.table.table-hover(style='border-top: 0px solid #ddd')
+                                                        tbody(ng-repeat='rm in hotel.rooms')
+                                                                td
+                                                                    img(src='{{deal.website.logo_image}}')
+                                                                //
+                                                                    <td ng-if="{{rm.room_type}}==1">Premium</td>
+                                                                    <td ng-if="{{rm.room_type}}==2">Executive</td>
+                                                                    <td ng-if="{{rm.room_type}}==3">Sweet</td>
+                                                                    <td ng-if="{{rm.room_type}}==4">Super_Deluxe</td>
+                                                                td {{rm.other_room_type}}
+                                                                td
+                                                                    a.button.btn-mini.orange(ng-click='showDetail(deal.room)') View Detail
+                                                                td.price
+                                                                    a(href='{{deal.hotel_url}}') &#x20B9;{{deal.price}}
+                                    
+
+
+                                    div(ng-repeat='room in hotel.rooms')
+                                            article.box(ng-if="{{room.room_type}}==1 && {{room.breakfast}}=='false' && {{room.balcony}}=='false'")
+                                                figure.col-sm-5.col-md-4
+                                                    img(data-toggle='modal', data-target='#myModal', ng-click='openGallery(hotel)', style='height:150px; cursor: pointer', src='{{hotel.images[0].image_url}}', alt='Travel Beans')
+                                                    // Modal
+                                                    #myModal.modal.fade(role='dialog')
+                                                        .modal-dialog
+                                                            // Modal content
+                                                            .modal-content
+                                                                #photos-tab.tab-pane.fade.active.in
+                                                                    .photo-gallery.style1(data-animation='slide', data-sync='#photos-tab .image-carousel')
+                                                                        .flex-viewport(style='overflow: hidden; position: relative;')
+                                                                            ul.slides.slider(style='width: 4000%; transition-duration: 0.6s;')
+                                                                                // ngRepeat: image in roomData.hotelData.images
+                                                                                li.mySlides.ng-scope(ng-repeat='image in roomData.hotelData.images', style=' float: left; display: block;')
+                                                                                    img.img(src='https://imgio.trivago.com/partnerimages/28/65/286549466_l.jpeg', alt='', draggable='false')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                                li.mySlides.ng-scope(ng-repeat='image in roomData.hotelData.images', style=' float: left; display: block;')
+                                                                                    img.img(src='https://imgio.trivago.com/uploadimages/26/26/26261124_l.jpeg', alt='', draggable='false')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                                li.mySlides.ng-scope(ng-repeat='image in roomData.hotelData.images', style=' float: left; display: block;')
+                                                                                    img.img(src='https://imgio.trivago.com/partnerimages/28/65/286549450_l.jpeg', alt='', draggable='false')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                        //
+                                                                            <ol class="flex-control-nav flex-control-paging">
+                                                                            <li><a class="">1</a></li>
+                                                                            <li><a class="">2</a></li>
+                                                                            <li><a class="flex-active">3</a></li>
+                                                                            </ol><ul class="flex-direction-nav">
+                                                                            <li><a class="flex-prev" href="#">Previous</a></li>
+                                                                            <li><a class="flex-next" href="#">Next</a></li>
+                                                                            </ul>
+                                                                    .image-carousel.style1(data-animation='slide', data-item-width='70', data-item-margin='10', data-sync='#photos-tab .photo-gallery')
+                                                                        .flex-viewport(style='overflow: hidden; position: relative;')
+                                                                            ul.slides(style='display:block; width: 3000%; ')
+                                                                                // ngRepeat: image in roomData.hotelData.images
+                                                                                li.demo.w3-opacity.w3-hover-opacity-off.ng-scope(ng-click='currentDiv($index+1)', ng-repeat='image in roomData.hotelData.images', style=' transition-duration: 0.6s; width: 70px; float: left; display: block; height: 70px; position: relative;')
+                                                                                    img.img(src='https://imgio.trivago.com/partnerimages/28/65/286549466_l.jpeg', alt='', draggable='false', style='position: absolute; top: 50%; margin-top: -35px; left: 50%; margin-left: -35px;')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                                li.demo.w3-opacity.w3-hover-opacity-off.ng-scope(ng-click='currentDiv($index+1)', ng-repeat='image in roomData.hotelData.images', style=' transition-duration: 0.6s; width: 70px; float: left; display: block; height: 70px; position: relative;')
+                                                                                    img.img(src='https://imgio.trivago.com/uploadimages/26/26/26261124_l.jpeg', alt='', draggable='false', style='position: absolute; top: 50%; margin-top: -35px; left: 50%; margin-left: -35px;')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                                li.demo.w3-opacity.w3-hover-opacity-off.ng-scope(ng-click='currentDiv($index+1)', ng-repeat='image in roomData.hotelData.images', style=' transition-duration: 0.6s; width: 70px; float: left; display: block; height: 70px; position: relative;')
+                                                                                    img.img(src='https://imgio.trivago.com/partnerimages/28/65/286549450_l.jpeg', alt='', draggable='false', style='position: absolute; top: 50%; margin-top: -35px; left: 50%; margin-left: -35px;')
+                                                                                // end ngRepeat: image in roomData.hotelData.images
+                                                                        ul.flex-direction-nav
+                                                                            li
+                                                                                a.flex-prev Previous
+                                                                            li
+                                                                                a.flex-next Next
+                                                .details.col-sm-7.col-md-8
+                                                    div
+                                                        div
+                                                            h4.box-title
+                                                                small
+                                                                    i.fa.fa-map-marker(aria-hidden='true')
+                                                                    span#latitude(style='cursor:pointer', ng-click='openMap(hotel)', data-toggle='modal', data-target='#mapModal', data-latitude='{{hotel.latitude}}', data-longitude='{{hotel.longitude}}') {{hotel.address}},{{hotel.city}}
+                                                            #mapModal.modal.fade(role='dialog')
+                                                                .modal-dialog
+                                                                    // Modal content
+                                                                    .modal-content
+                                                                        .modal-body
+                                                                            i.fa.fa-map-marker
+                                                                            span#longitude(data-latitude='{{mapData.latitude}}', data-longitude='{{mapData.longitude}}') {{mapData.city}}
+                                                                            #map(style='height:354px')
+                                                                                script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAg-3eaCM5LOJXDjY6cMBASoAnREc4-R58&callback=myMap')
+                                                                            p Some text in the modal.
+                                                            .amenities
+                                                                i.fa.fa-wifi(ng-if='hotel.amenities.wifi_in_lobby', aria-hidden='true')
+                                                                i.fa.fa-car(ng-if='hotel.amenities.parking', aria-hidden='true')
+                                                                i.fa.fa-heart(ng-if='hotel.amenities.couple_friendly', aria-hidden='true')
+                                                                i.fa.fa-dumbbell(ng-if='hotel.amenities.gym', aria-hidden='true')
+                                                                i.fa.fa-swimming-pool(ng-if='hotel.amenities.outdoor_swimming_pool', aria-hidden='true')
+                                                        div
+                                                            div(ng-if='{{hotel.star}}==1')
+                                                                span(ng-repeat='i in [1]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==2')
+                                                                span(ng-repeat='i in [1,2]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==3')
+                                                                span(ng-repeat='i in [1,2,3]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==4')
+                                                                span(ng-repeat='i in [1,2,3,4]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==5')
+                                                                span(ng-repeat='i in [1,2,3,4,5]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==6')
+                                                                span(ng-repeat='i in [1,2,3,4,5,6]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                            div(ng-if='{{hotel.star}}==7')
+                                                                span(ng-repeat='i in [1,2,3,4,5,6,7]', style='width:10px; height:10px')
+                                                                    img(style='width:12px', src='/images/star.png')
+                                                    div
+                                                        div
+                                                            span.price
+                                                                    small {{room.deals[0].website.website}}
+                                                            center
+                                                                a.button.btn-small.green(ng-click='showDetail(room.id)') View Detail
+                                                                a.button.btn-small.yellow(data-toggle='collapse', data-target='#{{hotel.id}}') More Deals
+                                                            span.price(style='text-align: left')
+                                                                a(href='{{price.hotel_url}}')
+                                                                    small {{price.website.website}}
+                                                .collapse(id='{{hotel.id}}', style='transition:2s')
+                                                    table.table.table-hover(style='border-top: 0px solid #ddd')
+                                                        tbody(ng-repeat='rm in hotel.rooms')
+                                                                td
+                                                                    img(src='{{deal.website.logo_image}}')
+                                                                //
+                                                                    <td ng-if="{{rm.room_type}}==1">Premium</td>
+                                                                    <td ng-if="{{rm.room_type}}==2">Executive</td>
+                                                                    <td ng-if="{{rm.room_type}}==3">Sweet</td>
+                                                                    <td ng-if="{{rm.room_type}}==4">Super_Deluxe</td>
+                                                                td {{rm.other_room_type}}
+                                                                td
+                                                                    a.button.btn-mini.orange(ng-click='showDetail(deal.room)') View Detail
+                                                                td.price
+                                                                    a(href='{{deal.hotel_url}}') &#x20B9;{{deal.price}}
+                                    div(ng-repeat='room in deal.roomdata.hoteldata.rooms')
+                                        article.box(ng-if="{{room.room_type}}==1 && {{room.breakfast}}=='false' && {{room.balcony}}=='false'")
+                                            figure.col-sm-5.col-md-4
+                                                img(data-toggle='modal', data-target='#myModal', ng-click='openGallery(deal.roomdata.hoteldata)', style='height:150px; cursor: pointer', src='{{deal.roomdata.hoteldata.images[0].image_url}}', alt='Travel Beans')
+                                                // Modal
+                                                #myModal.modal.fade(role='dialog')
+                                                    .modal-dialog
+                                                        // Modal content
+                                                        .modal-content
+                                                            #photos-tab.tab-pane.fade.active.in
+                                                                .photo-gallery.style1(data-animation='slide', data-sync='#photos-tab .image-carousel')
+                                                                    .flex-viewport(style='overflow: hidden; position: relative;')
+                                                                        ul.slides(style='width: 30000%; transition-duration: 0.6s;')
+                                                                            li.mySlides(ng-repeat='image in imagesData.images', style=' float: left; display: block;')
+                                                                                img(src='{{image.image_url}}', alt='', draggable='false')
+                                                                .image-carousel.style1(data-animation='slide', data-item-width='70', data-item-margin='10', data-sync='#photos-tab .photo-gallery')
+                                                                    .flex-viewport(style='overflow: hidden; position: relative;')
+                                                                        ul.slides(style='display:block; width: 2600%; ')
+                                                                            li.demo.w3-opacity.w3-hover-opacity-off(ng-click='currentDiv($index+1)', ng-repeat='image in imagesData.images', style=' transition-duration: 0.6s; width: 70px; float: left; display: block; height: 70px; position: relative;')
+                                                                                img.img(src='{{image.image_url}}', alt='', draggable='false', style='position: absolute; top: 50%; margin-top: -35px; left: 50%; margin-left: -35px;')
+                                                                    ul.flex-direction-nav
+                                                                        li
+                                                                            a.flex-prev Previous
+                                                                        li
+                                                                            a.flex-next Next
+                                            .details.col-sm-7.col-md-8
+                                                div
+                                                    div
+                                                        h4.box-title
+                                                            small
+                                                                i.fa.fa-map-marker(aria-hidden='true')
+                                                                span#latitude(style='cursor:pointer', ng-click='openMap(deal.roomdata.hoteldata)', data-toggle='modal', data-target='#mapModal', data-latitude='{{deal.roomdata.hoteldata.latitude}}', data-longitude='{{deal.roomdata.hoteldata.longitude}}') {{deal.roomdata.hoteldata.address}},{{deal.roomdata.hoteldata.city}}
+                                                        #mapModal.modal.fade(role='dialog')
+                                                            .modal-dialog
+                                                                // Modal content
+                                                                .modal-content
+                                                                    .modal-body
+                                                                        i.fa.fa-map-marker
+                                                                        span#longitude(data-latitude='{{mapData.latitude}}', data-longitude='{{mapData.longitude}}') {{mapData.city}}
+                                                                        #map(style='height:354px')
+                                                                            script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAg-3eaCM5LOJXDjY6cMBASoAnREc4-R58&callback=myMap')
+                                                                        p Some text in the modal.
+                                                        .amenities
+                                                            i.fa.fa-wifi(ng-if='deal.roomdata.hoteldata.amenities.wifi_in_lobby', aria-hidden='true')
+                                                            i.fa.fa-car(ng-if='deal.roomdata.hoteldata.amenities.parking', aria-hidden='true')
+                                                            i.fa.fa-heart(ng-if='deal.roomdata.hoteldata.amenities.couple_friendly', aria-hidden='true')
+                                                            i.fa.fa-dumbbell(ng-if='deal.roomdata.hoteldata.amenities.gym', aria-hidden='true')
+                                                            i.fa.fa-swimmer(ng-if='deal.roomdata.hoteldata.amenities.outdoor_swimming_pool', aria-hidden='true')
+                                                    div
+                                                        div(ng-if='{{deal.roomdata.hoteldata.star}}==1')
+                                                            span(ng-repeat='i in [1]', style='width:10px; height:10px')
+                                                                img(style='width:12px', src='/images/star.png')
+                                                        div(ng-if='{{deal.roomdata.hoteldata.star}}==2')
+                                                            span(ng-repeat='i in [1,2]', style='width:10px; height:10px')
+                                                                img(style='width:12px', src='/images/star.png')
+                                                        div(ng-if='{{deal.roomdata.hoteldata.star}}==3')
+                                                            span(ng-repeat='i in [1,2,3]', style='width:10px; height:10px')
+                                                                img(style='width:12px', src='/images/star.png')
+                                                        div(ng-if='{{deal.roomdata.hoteldata.star}}==4')
+                                                            span(ng-repeat='i in [1,2,3,4]', style='width:10px; height:10px')
+                                                                img(style='width:12px', src='/images/star.png')
+                                                        div(ng-if='{{deal.roomdata.hoteldata.star}}==5')
+                                                            span(ng-repeat='i in [1,2,3,4,5]', style='width:10px; height:10px')
+                                                                img(style='width:12px', src='/images/star.png')
+                                                        div(ng-if='{{deal.roomdata.hoteldata.star}}==6')
+                                                            span(ng-repeat='i in [1,2,3,4,5,6]', style='width:10px; height:10px')
+                                                                img(style='width:12px', src='/images/star.png')
+                                                        div(ng-if='{{deal.roomdata.hoteldata.star}}==7')
+                                                            span(ng-repeat='i in [1,2,3,4,5,6,7]', style='width:10px; height:10px')
+                                                                img(style='width:12px', src='/images/star.png')
+                                                div
+                                                    div
+                                                        span.price
+                                                            a(href='{{deal.hotel_url}}')
+                                                                small {{deal.website.website}}
+                                                        center
+                                                            a.button.btn-small.green(ng-click='showDetail(room.id)') View Detail
+                                                            a.button.btn-small.yellow(data-toggle='collapse', data-target='#{{deal.roomdata.hoteldata.id}}') More Deals
+                                                            // <button class="button btn-small yellow" class="tablinks" onclick="opendeals(event, 'deals')">More Deals</button>
+                                                        span.price(style='text-align: left')
+                                                            a(href='{{price.hotel_url}}')
+                                                                small {{price.website.website}}
+                                            .collapse(id='{{deal.roomdata.hoteldata.id}}', style='transition:2s')
+                                                table.table.table-hover
+                                                    tbody(ng-repeat='rm in deal.roomdata.hoteldata.rooms', style='border-top: 0px solid #ddd;')
+                                                            td
+                                                                img(src='{{deal.website.logo_image}}')
+                                                            //
+                                                                <td ng-if="{{rm.room_type}}==1">Premium</td>
+                                                                <td ng-if="{{rm.room_type}}==2">Executive</td>
+                                                                <td ng-if="{{rm.room_type}}==3">Sweet</td>
+                                                                <td ng-if="{{rm.room_type}}==4">Super_Deluxe</td>
+                                                            td {{rm.other_room_type}}
+                                                            td
+                                                                a.button.btn-mini.orange(ng-click='showDetail(deal.room)') View Detail
+                                                            td.price
+                                                                a(href='{{deal.hotel_url}}') &#x20B9;{{deal.price}}
+                                .hotel-list.listing-style3.hotel
+                                    article.box(ng-if='result')
+                                        h3 No Result found
+                                .hotel-list.listing-style3.hotel
+                                    article.box(ng-if='hresult')
+                                        h3 No Result found
+                                a.uppercase.full-width.button.btn-large(href='', ng-click='loadMore()') load more listing
+                footer#footer.style5(style='background-color:white;')
+                    .footer-wrapper
+                        .container
+                            .row
+                                .col-xs-12.col-sm-6.col-md-3.col-lg-3
+                                    h2 Travel Beans
+                                    ul.discover.triangle.hover.row
+                                        li.col-xs-6
+                                            a(href='') About Company
+                                        li.col-xs-6
+                                            a(href='') Jobs
+                                        li.col-xs-6
+                                            a(href='') Corporate Offices
+                                        li.col-xs-6
+                                            a(href='') Carrers
+                                        li.col-xs-6
+                                            a(href='') Legal Information
+                                        li.col-xs-6
+                                            a(href='') Press Release
+                                        li.col-xs-6
+                                            a(href='') Investors
+                                        li.col-xs-6
+                                            a(href='') T &amp; C
+                                        li.col-xs-6
+                                            a(href='') Customer Care
+                                        li.col-xs-6
+                                            a(href='') Privacy Policies
+                                        li.col-xs-6
+                                            a(href='') Partner Help
+                                        li.col-xs-6
+                                            a(href='') FAQ&apos;s
+                                        li.col-xs-6
+                                            a(href='') Site Map
+                                .col-xs-12.col-sm-6.col-md-3.col-lg-3
+                                    h2 Products
+                                    ul.discover.triangle.hover.row
+                                        li.col-xs-
+                                            a(href='') TB Associates
+                                        li.col-xs-
+                                            a(href='') TB Galaria
+                                        li.col-xs-
+                                            a(href='') TB Judge
+                                        li.col-xs-
+                                            a(href='') TB Sarah
+                                        li.col-xs-
+                                            a(href='') TB #Tag
+                                        li.col-xs-
+                                            a(href='') TB Shoppist
+                                        li.col-xs-
+                                            a(href='') TB Indi Coin
+                                .col-xs-12.col-sm-6.col-md-3.col-lg-3
+                                    h2 Grab Some Offers Now
+                                    p Subscribe Us to get latest Updates and offe&#x20B9;
+                                    br
+                                    .icon-check
+                                        input.input-text.full-width(type='text', placeholder='your email')
+                                    br
+                                    span We respect your privacy
+                                .col-xs-12.col-sm-6.col-md-3.col-lg-3
+                                    h2 About Travel Beans
+                                    p
+                                    br
+                                    address.contact-details
+                                        span.contact-phone
+                                            i.soap-icon-phone
+                                        br
+                                        a.contact-email(href='') contact@travelbeans.in
+                                    ul.social-icons.clearfix
+                                        li.twitter
+                                            a(title='', href='', data-toggle='tooltip', data-original-title='twitter')
+                                                i.soap-icon-twitter
+                                        li.googleplus
+                                            a(title='', href='', data-toggle='tooltip', data-original-title='googleplus')
+                                                i.soap-icon-googleplus
+                                        li.facebook
+                                            a(title='', href='', data-toggle='tooltip', data-original-title='facebook')
+                                                i.soap-icon-facebook
+                                        li.linkedin
+                                            a(title='', href='', data-toggle='tooltip', data-original-title='linkedin')
+                                                i.soap-icon-linkedin
+                                        li.vimeo
+                                            a(title='', href='', data-toggle='tooltip', data-original-title='vimeo')
+                                                i.soap-icon-vimeo
+                                        li.dribble
+                                            a(title='', href='', data-toggle='tooltip', data-original-title='dribble')
+                                                i.soap-icon-dribble
+                                        li.flickr
+                                            a(title='', href='', data-toggle='tooltip', data-original-title='flickr')
+                                                i.soap-icon-flickr
+                    .bottom.gray-area
+                        .container
+                            .logo.pull-left
+                                a(href='http://www.soaptheme.net/html/travelo/index.html', title='Travelo - home')
+                                    img(src='./Footer Hotel_files/logo.png', alt='Travelo HTML5 Template')
+                            //
+                                <div class="pull-right">
+                                <a id="back-to-top" href="" class="animated bounce" data-animation-type="bounce" style="animation-duration: 1s; visibility: visible;"><i class="soap-icon-longarrow-up circle"></i></a>
+                                </div>
+                            .copyright.pull-right
+                                p &copy; 2018 Travel Beans
